@@ -1,0 +1,316 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Amishi Agrawal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Amishi Agrawal: AI Engineer and Python Backend Developer in Indore, India. RAG pipelines, AI agents, LLM observability, Django, FastAPI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single readable column; hero splits into intro + API-response card, projects as a two-up grid that stacks on phones */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --ink:#151a22; --muted:#5b6472; --line:#dde1e7;
+  --accent:#0f6f68; --accent-soft:#e2f1ef; --warm:#b45309; --warm-soft:#fbefe1;
+  --code-bg:#151a22; --code-ink:#d8dee8; --code-key:#7fd4c9; --code-str:#f3c58b; --code-dim:#7d8695;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1318; --surface:#171c23; --ink:#e7ebf0; --muted:#9aa3b0; --line:#2a313b;
+  --accent:#5cc7bb; --accent-soft:#16312f; --warm:#f0a35a; --warm-soft:#33251a;
+  --code-bg:#0a0d11; --code-ink:#d8dee8; --code-key:#7fd4c9; --code-str:#f3c58b; --code-dim:#6f7886;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1318; --surface:#171c23; --ink:#e7ebf0; --muted:#9aa3b0; --line:#2a313b;
+  --accent:#5cc7bb; --accent-soft:#16312f; --warm:#f0a35a; --warm-soft:#33251a;
+  --code-bg:#0a0d11; --code-ink:#d8dee8; --code-key:#7fd4c9; --code-str:#f3c58b; --code-dim:#6f7886;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+.mark{font-family:var(--mono);font-size:14px;color:var(--ink);text-decoration:none;font-weight:500}
+.mark span{color:var(--accent)}
+.navlinks{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
+.navlinks a{color:var(--muted);text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-block:40px 72px}
+.hero > *{min-width:0}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero h1{font-size:clamp(40px,6vw,64px);font-weight:700;letter-spacing:-.02em}
+.hero .role{font-family:var(--display);font-weight:500;font-size:clamp(20px,2.4vw,26px);color:var(--muted);margin-top:12px}
+.hero .lede{margin-top:20px;max-width:58ch;color:var(--ink)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+
+/* api card */
+.api{background:var(--code-bg);color:var(--code-ink);border-radius:12px;font-family:var(--mono);font-size:13.5px;line-height:1.7;overflow:hidden}
+.api-head{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid #ffffff14;color:var(--code-dim);font-size:12.5px}
+.api-head b{color:var(--code-key);font-weight:500}
+.api pre{margin:0;padding:18px;overflow-x:auto;white-space:pre}
+.k{color:var(--code-key)} .s{color:var(--code-str)} .d{color:var(--code-dim)}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font-size:clamp(26px,3.2vw,34px);font-weight:700;letter-spacing:-.01em}
+.sec-head p{color:var(--muted);font-size:15px;max-width:52ch}
+
+/* job */
+.job{display:grid;grid-template-columns:220px 1fr;gap:32px}
+.job > *{min-width:0}
+.job-meta{font-size:14px;color:var(--muted)}
+.job-meta strong{display:block;color:var(--ink);font-size:16px;font-weight:600;margin-bottom:4px}
+.job-meta .mono{font-family:var(--mono);font-size:13px}
+.job ul{margin:0;padding-left:18px;display:grid;gap:10px}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.domain{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.kind{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.kind.backend{background:var(--warm-soft);color:var(--warm)}
+.proj h3{font-size:21px;font-weight:700}
+.proj p{color:var(--ink);font-size:15px}
+.proj ul{margin:0;padding-left:18px;font-size:15px;display:grid;gap:6px;color:var(--ink)}
+.live{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:13px;font-weight:500;text-decoration:none}
+.live:hover{text-decoration:underline}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font-family:var(--mono);font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
+
+/* now building */
+.building{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.build{border:1px dashed var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--warm)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--warm)}
+.build h3{font-size:20px}
+.build p{font-size:15px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 32px}
+.skill h3{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.skill p{font-size:15px;color:var(--ink)}
+
+/* edu + contact */
+.edu{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.edu strong{font-weight:600}
+.edu .mono{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.contact > *{min-width:0}
+.contact h2{font-size:clamp(28px,4vw,40px)}
+.contact p{color:var(--muted);margin-top:10px;max-width:52ch}
+.links{display:grid;gap:10px;font-size:15px}
+.links .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.links .lbl{font-family:var(--mono);font-size:12px;color:var(--muted);width:72px;text-transform:uppercase;letter-spacing:.05em}
+.links .val{user-select:all;overflow-wrap:anywhere}
+.copy{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+footer{padding-block:28px 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);font-family:var(--mono)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-block:24px 56px}
+  .job{grid-template-columns:1fr;gap:16px}
+  .grid,.building{grid-template-columns:1fr}
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:520px){ .skills{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <nav>
+    <a class="mark" href="#top">amishi<span>.</span>agrawal</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <p class="eyebrow">Indore, India · AI &amp; Backend Engineering</p>
+      <h1>Amishi Agrawal</h1>
+      <p class="role">AI Engineer &amp; Python Backend Developer</p>
+      <p class="lede">I build Generative AI features and the Python backends that run them in production: RAG pipelines over documents, tool-calling agents on AWS Bedrock AgentCore, and LLM tracing with Langfuse, on Django, DRF and FastAPI services backed by PostgreSQL, Redis and Celery.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn" href="https://github.com/AmishiAgr" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/amishiagrawal" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="api" aria-label="Profile summary formatted as an API response">
+      <div class="api-head"><span><b>GET</b> /v1/engineers/amishi</span><span>200 OK</span></div>
+<pre>{
+  <span class="k">"role"</span>: <span class="s">"AI Engineer | Python Backend"</span>,
+  <span class="k">"experience_years"</span>: 3.2,
+  <span class="k">"previously"</span>: <span class="s">"Cyber Infrastructure (2023–2026)"</span>,
+  <span class="k">"ships"</span>: [
+    <span class="s">"RAG pipelines"</span>,
+    <span class="s">"AI agents (Bedrock AgentCore)"</span>,
+    <span class="s">"LLM observability (Langfuse)"</span>,
+    <span class="s">"REST APIs + async workers"</span>
+  ],
+  <span class="k">"stack"</span>: [<span class="s">"Python"</span>, <span class="s">"Django"</span>, <span class="s">"DRF"</span>,
+            <span class="s">"FastAPI"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"Redis"</span>,
+            <span class="s">"Celery"</span>, <span class="s">"AWS"</span>, <span class="s">"GCP"</span>],
+  <span class="k">"domains"</span>: [<span class="s">"EdTech"</span>, <span class="s">"Travel"</span>, <span class="s">"Wellness"</span>, <span class="s">"Fintech"</span>]
+}</pre>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>Experience</h2>
+    </div>
+    <div class="job">
+      <div class="job-meta">
+        <strong>Software Developer</strong>
+        Cyber Infrastructure<br>
+        Indore, India<br>
+        <span class="mono">Sep 2023 – Nov 2026</span>
+      </div>
+      <ul>
+        <li>Designed and built AI-powered backend systems in Python with Django and Django REST Framework, integrating OpenAI APIs, RAG workflows, embeddings and semantic search into client products across EdTech, travel, wellness and fintech.</li>
+        <li>Built REST APIs and services on PostgreSQL and MySQL, with Redis caching and Celery for background jobs, asynchronous processing and transaction monitoring.</li>
+        <li>Deployed and configured applications on AWS (Lambda, S3, Bedrock, AgentCore) and GCP (Cloud Storage, Redis).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head">
+      <h2>Selected projects</h2>
+      <p>Client work delivered at Cyber Infrastructure. Code is private, so each card describes what I built and links to the live product where there is one.</p>
+    </div>
+    <div class="grid">
+      <article class="proj">
+        <div class="proj-top"><span class="domain">EdTech</span><span class="kind">RAG · Document AI</span></div>
+        <h3>Starlight: Quiz Management System</h3>
+        <p>A teaching platform with automated grading, where students can upload PDFs and ask questions about them in plain language instead of reading every page.</p>
+        <ul>
+          <li>Documents are chunked, embedded with OpenAI Embeddings and stored in pgvector; relevant chunks are retrieved by semantic search and passed to the Chat Completions API for grounded answers.</li>
+          <li>Django/DRF APIs for document processing and user management, with role-based access for Admin, Teacher and Student.</li>
+        </ul>
+        <a class="live" href="https://thestarlight.org/" target="_blank" rel="noopener">thestarlight.org ↗</a>
+        <div class="tags"><span class="tag">Django</span><span class="tag">DRF</span><span class="tag">OpenAI</span><span class="tag">pgvector</span><span class="tag">PostgreSQL</span><span class="tag">RBAC</span></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top"><span class="domain">Travel</span><span class="kind">AI Agents · LLMOps</span></div>
+        <h3>Guide by PersonifAI</h3>
+        <p>An AI travel planner: an agent that builds personalised itineraries by calling tools and generating plans with an LLM.</p>
+        <ul>
+          <li>Deployed the Bedrock-based agent to AWS AgentCore and worked on its architecture and tool/function calling.</li>
+          <li>Integrated the Langfuse SDK for request tracing and monitoring, and built dynamic prompt management so clients update prompts without a code deploy.</li>
+        </ul>
+        <a class="live" href="https://personifai.ca/" target="_blank" rel="noopener">personifai.ca ↗</a>
+        <div class="tags"><span class="tag">AWS Bedrock</span><span class="tag">AgentCore</span><span class="tag">Tool calling</span><span class="tag">Langfuse</span><span class="tag">Python</span></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top"><span class="domain">Wellness</span><span class="kind">LLM Integration</span></div>
+        <h3>AI Companion Platform</h3>
+        <p>One assistant, several personas: academic mentor, spiritual guide, fitness guide and general helper.</p>
+        <ul>
+          <li>Integrated the OpenAI API and engineered role-specific system prompts to control each persona's behaviour and tone.</li>
+        </ul>
+        <div class="tags"><span class="tag">OpenAI API</span><span class="tag">Prompt engineering</span><span class="tag">Django</span></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top"><span class="domain">Fintech · Web3</span><span class="kind backend">Backend</span></div>
+        <h3>Scion Wallet: Subscription Platform</h3>
+        <p>Scion Wallet is a paid crypto wallet extension. Users sign up, subscribe and pay through the Scion website, paying in cryptocurrency. I built that website, with my focus on the backend; the extension itself is a separate codebase.</p>
+        <ul>
+          <li>User and subscription management APIs with four-role RBAC (Admin, Enterprise, User, Support), enterprise onboarding and document verification.</li>
+          <li>Crypto subscription payments, with Celery and Redis background jobs that execute, verify and update the status of each transaction.</li>
+        </ul>
+        <a class="live" href="https://scion.digital/" target="_blank" rel="noopener">scion.digital ↗</a>
+        <div class="tags"><span class="tag">DRF</span><span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">RBAC</span><span class="tag">Smart contracts</span></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top"><span class="domain">Fintech · Web3</span><span class="kind backend">Backend</span></div>
+        <h3>United Instantly</h3>
+        <p>Custodial wallet backend that keeps user wallets funded automatically.</p>
+        <ul>
+          <li>Threshold-based auto-funding workflows and admin reimbursement processing.</li>
+          <li>Background monitoring of each transaction through its full lifecycle.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Celery</span><span class="tag">Async workflows</span><span class="tag">Wallets</span></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top"><span class="domain">Across projects</span><span class="kind backend">Platform</span></div>
+        <h3>Cloud &amp; async infrastructure</h3>
+        <p>The shared plumbing behind the products above.</p>
+        <ul>
+          <li>Queue-based background processing with Celery and Redis for slow or long-running work.</li>
+          <li>Deployments on AWS Lambda and S3 and on GCP Cloud Storage and Redis.</li>
+        </ul>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Celery</span><span class="tag">Redis</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Generative AI</h3><p>LLMs, OpenAI API (chat, embeddings), prompt engineering, function / tool calling, AI agents, agentic workflows, LangChain</p></div>
+      <div class="skill"><h3>RAG &amp; search</h3><p>Retrieval-augmented generation, chunking, embedding pipelines, semantic search, vector database (pgvector)</p></div>
+      <div class="skill"><h3>LLMOps</h3><p>Langfuse, LLM observability, request tracing, dynamic prompt management</p></div>
+      <div class="skill"><h3>Backend</h3><p>Python, Django, Django REST Framework, FastAPI, REST API design, authentication, RBAC</p></div>
+      <div class="skill"><h3>Data &amp; async</h3><p>PostgreSQL, MySQL, Redis, Celery, background jobs, queue-based workflows</p></div>
+      <div class="skill"><h3>Cloud &amp; tools</h3><p>AWS (Lambda, S3, Bedrock, AgentCore), GCP (Cloud Storage, Redis), Git, GitHub</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head"><h2>Education</h2></div>
+    <div class="edu">
+      <div><strong>B.Tech, Computer Science and Engineering</strong><br>Thakur Shivkumar Singh Memorial Engineering College (RGPV), Burhanpur</div>
+      <span class="mono">2019 – 2023</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <h2>Get in touch</h2>
+        <p>Questions about my work, a project idea or a conversation about AI and backend engineering. Email is the best way to reach me.</p>
+      </div>
+      <div class="links">
+        <div class="row"><span class="lbl">Email</span><span class="val" id="email">amishiagrawal02@gmail.com</span><button class="copy" id="copy-email" type="button">Copy</button></div>
+        <div class="row"><span class="lbl">LinkedIn</span><a href="https://linkedin.com/in/amishiagrawal" target="_blank" rel="noopener">linkedin.com/in/amishiagrawal</a></div>
+        <div class="row"><span class="lbl">GitHub</span><a href="https://github.com/AmishiAgr" target="_blank" rel="noopener">github.com/AmishiAgr</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Amishi Agrawal · Indore, India</footer>
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var btn = this, text = document.getElementById('email').textContent;
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('email')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+
+</body></html>
